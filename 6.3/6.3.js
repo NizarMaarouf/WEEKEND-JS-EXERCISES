@@ -1,0 +1,13 @@
+var a = "xyaabbbccccdefwwNizaR";
+var b = "xxxxyyyyabklmopnq";
+const array = a.concat(b);
+var count = {};
+var uniqueCount = array.split('');
+uniqueCount.sort();
+uniqueCount.forEach(function(i) { count[i] = (count[i] || 0) + 1; });
+//const uniqueSet = new Set(uniqueCount);
+const newSet = Array.from(new Set(uniqueCount));
+//const newSet1 = uniqueCount.filter((item, index) => uniqueCount.indexOf(item) === index);
+//console.log(uniqueSet);
+console.log(newSet);
+//console.log(newSet1);
